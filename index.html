@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Kumar | Portfolio</title>
+    <meta name="description" content="Portfolio of Deepak Kumar, a software developer skilled in C++, Python, AWS, and Web Development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-content">
+            <a href="#hero" class="logo">Deepak.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education & Training</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero fade-in">
+            <div class="container h-flex">
+                <div class="hero-content">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="name gradient-text" id="hero-name">Deepak Kumar</h1>
+                    <h2 class="title" id="hero-title">Software Developer</h2>
+                    <p class="summary" id="hero-summary">Computer Science engineering student passionate about building scalable solutions, cloud architecture, and beautiful web experiences.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper glass-panel">
+                        <!-- Generated Formal Corporate Avatar -->
+                        <img src="./assets/profile_avatar.png" alt="Profile Photo" id="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section fade-in">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text glass-panel" id="about-text">
+                        <p>I am a B.Tech Computer Science and Engineering student at Lovely Professional University. I have a strong foundation in Data Structures and Algorithms with over 200+ problems solved across LeetCode and GeeksForGeeks.</p>
+                        <p>I'm experienced in building real-world projects using web technologies and AWS cloud services. My technical journey involves creating automated parking systems, AWS-native file upload architectures, and interactive CPU scheduling simulators.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card glass-panel">
+                            <h3 id="stat-exp">200+</h3>
+                            <p>DSA Solved</p>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <h3 id="stat-proj">Top 30%</h3>
+                            <p>HackWithVertos 1.0</p>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <h3 id="stat-clients">4+</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section instead of Experience -->
+        <section id="education" class="experience section fade-in">
+            <div class="container">
+                <h2 class="section-title">Education & Training</h2>
+                <div class="timeline" id="experience-timeline">
+                    
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-dot"></div>
+                        <div class="date">Jun 2025 - Jul 2025</div>
+                        <h3>Data Structure and Algorithms using C++</h3>
+                        <h4>Cipher Schools | Summer Training</h4>
+                        <p>Strengthened ability to solve computational problems using efficient DSA-based approaches in C++. Improved understanding of core data structures and gained confidence to write optimized, industrial-standard code using the STL.</p>
+                    </div>
+
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-dot"></div>
+                        <div class="date">Aug 2023 - Present</div>
+                        <h3>B.Tech Computer Science and Engineering</h3>
+                        <h4>Lovely Professional University, Phagwara, Punjab</h4>
+                        <p>Current CGPA: 6.19</p>
+                    </div>
+
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-dot"></div>
+                        <div class="date">Apr 2022 - Mar 2023</div>
+                        <h3>Intermediate</h3>
+                        <h4>Modern Academy, Lucknow, UP</h4>
+                        <p>Percentage: 70.0%</p>
+                    </div>
+                    
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-dot"></div>
+                        <div class="date">Apr 2020 - Mar 2021</div>
+                        <h3>Matriculation</h3>
+                        <h4>Modern Academy, Lucknow, UP</h4>
+                        <p>Percentage: 82.2%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section fade-in">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid" id="skills-grid">
+                    <div class="skill-category glass-panel">
+                        <h3>Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Cloud & AWS Services</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">AWS EC2</span>
+                            <span class="skill-tag">AWS S3</span>
+                            <span class="skill-tag">AWS IAM</span>
+                            <span class="skill-tag">AWS VPC</span>
+                            <span class="skill-tag">AWS RDS</span>
+                            <span class="skill-tag">AWS Lambda</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Databases & Tools</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section fade-in">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <div class="project-card glass-panel">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Parking Management System">
+                        </div>
+                        <div class="project-info">
+                            <h3>Parking Management System</h3>
+                            <p>Real-time parking slot management system to track vehicle entry, exit, and availability. Includes automated slot allocation logic and vehicle record storage using MySQL.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Sep 2025 - Dec 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-card glass-panel">
+                        <div class="project-img">
+                            <img src="./assets/aws_project.png" alt="Amazon Saving Services">
+                        </div>
+                        <div class="project-info">
+                            <h3>Amazon Saving Services</h3>
+                            <p>Secure and scalable file upload system architected entirely within AWS. Utilizes S3 for storage, Lambda for generating presigned URLs, and CloudWatch for monitoring.</p>
+                            <div class="project-tech">
+                                <span>AWS S3</span>
+                                <span>AWS Lambda</span>
+                                <span>AWS IAM</span>
+                                <span>CloudWatch</span>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Jan 2025 - Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-card glass-panel">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Intelligent CPU Scheduler Simulator">
+                        </div>
+                        <div class="project-info">
+                            <h3>Intelligent CPU Scheduler Simulator</h3>
+                            <p>Interactive tool to master key scheduling algorithms (FCFS, SJF, Round Robin, Priority Scheduling). Built responsive visual layouts to simulate and analyze algorithms.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Jan 2025 - Mar 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section fade-in">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper glass-panel">
+                    <div class="contact-info">
+                        <h3>Let's work together</h3>
+                        <p>I'm continuously seeking out new challenges and opportunities to apply my skills in software development and AWS cloud computing. Feel free to reach out!</p>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-phone-alt"></i> <span id="contact-phone">+91 8881099212</span></li>
+                            <li><i class="fas fa-envelope"></i> <span id="contact-email">deepakkumar226010@gmail.com</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span id="contact-location">Lucknow, Uttar Pradesh 226010</span></li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="https://github.com/deepakkumar888" target="_blank" aria-label="GitHub" id="link-github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                            <a href="https://linkedin.com/in/deepak1902" target="_blank" aria-label="LinkedIn" id="link-linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Designed and Built for Deepak Kumar.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
