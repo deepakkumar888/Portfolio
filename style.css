@@ -58,7 +58,7 @@ body {
     height: 40vw;
     border-radius: 50%;
     filter: blur(100px);
-    opacity: 0.15;
+    opacity: 0.08;
     animation: float 20s infinite ease-in-out alternate;
 }
 
@@ -81,7 +81,7 @@ body {
     width: 25vw;
     height: 25vw;
     background: radial-gradient(circle, var(--accent-2), transparent 70%);
-    opacity: 0.1;
+    opacity: 0.04;
     animation-delay: -10s;
 }
 
