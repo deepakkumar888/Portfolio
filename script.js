@@ -69,4 +69,102 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // CV Upload Handler
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('cv-input');
+    const fileInfo = document.getElementById('file-info');
+    const fileName = document.getElementById('file-name');
+    const cvPreview = document.getElementById('cv-preview');
+
+    if (uploadArea && fileInput) {
+        // Drag and drop events
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--accent-1)';
+            uploadArea.style.background = 'rgba(0, 242, 254, 0.1)';
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '';
+            uploadArea.style.background = '';
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '';
+            uploadArea.style.background = '';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileSelect(files[0]);
+            }
+        });
+
+        // File input change event
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileSelect(e.target.files[0]);
+            }
+        });
+
+        // Click on upload area to open file picker
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        function handleFileSelect(file) {
+            const validTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'];
+            
+            if (!validTypes.includes(file.type)) {
+                alert('Please upload a PDF, JPG, or PNG file');
+                return;
+            }
+
+            if (file.size > 10 * 1024 * 1024) { // 10MB limit
+                alert('File size must be less than 10MB');
+                return;
+            }
+
+            // Create a preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                // Update preview
+                cvPreview.src = e.target.result;
+                
+                // Show file info
+                fileName.textContent = file.name;
+                fileInfo.style.display = 'block';
+                
+                // Save to localStorage (for demonstration)
+                localStorage.setItem('cvFileName', file.name);
+                localStorage.setItem('cvData', e.target.result);
+                
+                // Reset file input
+                fileInput.value = '';
+                
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #00f2fe; color: #000; padding: 1rem 2rem; border-radius: 8px; z-index: 1000;';
+                successMsg.textContent = '✓ CV Updated Successfully!';
+                document.body.appendChild(successMsg);
+                
+                setTimeout(() => {
+                    successMsg.remove();
+                }, 3000);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Load CV from localStorage on page load
+        const savedCV = localStorage.getItem('cvData');
+        const savedFileName = localStorage.getItem('cvFileName');
+        if (savedCV) {
+            cvPreview.src = savedCV;
+            if (savedFileName) {
+                fileName.textContent = savedFileName;
+                fileInfo.style.display = 'block';
+            }
+        }
+    }
 });

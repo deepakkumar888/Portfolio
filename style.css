@@ -505,6 +505,33 @@ a {
     transform: translateY(-2px);
 }
 
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.certification-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.certification-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.certification-card span {
+    font-size: 0.9rem;
+    color: var(--accent-1);
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -565,6 +592,104 @@ a {
 
 @media (max-width: 480px) {
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CV Section */
+.cv-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.cv-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cv-preview {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    max-height: 600px;
+}
+
+.cv-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cv-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.cv-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cv-upload h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    border: 2px dashed var(--glass-border);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.02);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.upload-area:hover {
+    border-color: var(--accent-1);
+    background: rgba(0, 242, 254, 0.05);
+}
+
+.upload-area i {
+    font-size: 3rem;
+    color: var(--accent-1);
+}
+
+.upload-area p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.upload-area span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.file-info {
+    padding: 1rem;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.file-info p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 950px) {
+    .cv-wrapper {
         grid-template-columns: 1fr;
     }
 }

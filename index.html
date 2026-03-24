@@ -26,8 +26,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#internships">Internships</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu-btn">
@@ -55,8 +57,8 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper glass-panel">
-                        <!-- Generated Formal Corporate Avatar -->
-                        <img src="./assets/profile_avatar.png" alt="Profile Photo" id="profile-img">
+                        <!-- Authentic LinkedIn Profile Photo -->
+                        <img src="./assets/real_profile.jpg" alt="Profile Photo" id="profile-img">
                     </div>
                 </div>
             </div>
@@ -68,8 +70,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text glass-panel" id="about-text">
-                        <p>I am a B.Tech Computer Science and Engineering student at Lovely Professional University. I have a strong foundation in Data Structures and Algorithms with over 200+ problems solved across LeetCode and GeeksForGeeks.</p>
-                        <p>I'm experienced in building real-world projects using web technologies and AWS cloud services. My technical journey involves creating automated parking systems, AWS-native file upload architectures, and interactive CPU scheduling simulators.</p>
+                        <p>I'm Deepak Kumar, a dedicated Computer Science student at Lovely Professional University with a strong foundation in Data Structures and Algorithms (200+ problems solved on LeetCode and GeeksForGeeks). Passionate about software development, I specialize in building scalable web applications and cloud solutions using AWS.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-card glass-panel">
@@ -172,6 +173,35 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section fade-in">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card glass-panel">
+                        <h3>Introduction to Python</h3>
+                        <p>Coursera</p>
+                        <span>2023</span>
+                    </div>
+                    <div class="certification-card glass-panel">
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <p>Amazon Web Services</p>
+                        <span>2024</span>
+                    </div>
+                    <div class="certification-card glass-panel">
+                        <h3>Data Structure and Algorithms using C++</h3>
+                        <p>Cipher Schools</p>
+                        <span>2025</span>
+                    </div>
+                    <div class="certification-card glass-panel">
+                        <h3>Certified in Cyber Risk Assessment</h3>
+                        <p>Infosys Springboard</p>
+                        <span>2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Internships Section -->
         <section id="internships" class="experience section fade-in">
             <div class="container">
@@ -254,6 +284,42 @@
                                 <span>Python</span>
                             </div>
                             <span style="font-size: 0.8rem; color: var(--text-secondary);">Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="cv section fade-in">
+            <div class="container">
+                <h2 class="section-title">My CV</h2>
+                <div class="cv-wrapper">
+                    <div class="cv-display glass-panel">
+                        <div class="cv-preview">
+                            <img src="./assets/Deepak_Kumar_CV.jpeg" alt="CV Preview" id="cv-preview">
+                        </div>
+                        <div class="cv-actions">
+                            <a href="./assets/Deepak_Kumar_CV.jpeg" download="Deepak_Kumar_CV.jpeg" class="btn primary-btn" style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-upload glass-panel">
+                        <h3>Update Your CV</h3>
+                        <div class="upload-area" id="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag and drop your CV file here</p>
+                            <span>or</span>
+                            <label for="cv-input" class="btn secondary-btn" style="cursor: pointer; display: inline-block;">
+                                Choose File
+                            </label>
+                            <input type="file" id="cv-input" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        </div>
+                        <div class="file-info" id="file-info" style="display: none;">
+                            <p>File: <strong id="file-name"></strong></p>
+                            <p>Note: File changes are saved locally. Make sure to keep a backup!</p>
                         </div>
                     </div>
                 </div>
