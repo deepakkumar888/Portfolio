@@ -71,12 +71,12 @@ a {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .section-title {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     position: relative;
     display: inline-block;
 }
@@ -454,6 +454,39 @@ a {
 }
 
 /* Experience Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.education-card {
+    padding: 1.5rem;
+    position: relative;
+    border-left: 4px solid var(--accent-1);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.education-card .date {
+    font-size: 0.9rem;
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.education-card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.education-card h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
