@@ -168,3 +168,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Global Modal Functions
+window.openModal = function(title, text, imageSrc) {
+    const modal = document.getElementById('project-modal');
+    if (!modal) return;
+    
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-desc').innerText = text;
+    document.getElementById('modal-img').src = imageSrc;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeModal = function(event, force = false) {
+    const modal = document.getElementById('project-modal');
+    if (!modal) return;
+    
+    if (force || event.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
