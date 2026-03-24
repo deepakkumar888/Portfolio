@@ -508,28 +508,59 @@ a {
 /* Certifications Section */
 .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
 .certification-card {
-    padding: 2rem;
-    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.certification-card h3 {
+.cert-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.5);
+}
+
+.cert-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.certification-card:hover .cert-img img {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-info h3 {
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    font-size: 1.3rem;
 }
 
-.certification-card p {
+.cert-info p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
-.certification-card span {
-    font-size: 0.9rem;
+.cert-info span {
+    font-size: 0.8rem;
     color: var(--accent-1);
+    font-weight: 500;
 }
 
 /* Projects Section */
